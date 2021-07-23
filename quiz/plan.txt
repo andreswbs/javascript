@@ -1,0 +1,25 @@
+
+Question
+    - question
+    - correctAnswer
+    - function: makeQuestionOutput
+    - function: makeAnswerOutput
+    - function: makeCorrectAnswerOutput
+
+RadioQuestion <- Question
+    - choices  (needs to be an array)
+    - function: makeAnswersOutput <- override this method to show radio boxes
+    - function: addChoice
+
+CheckboxQuestion <- RadioQuestion
+    - function: makeAnswersOutput <- override this method to show checkboxes
+
+PictureQuestion <- RadioQuestion
+    - function: makeAnswersOutput <- override this method to show pictures for answers
+
+Test
+    - title
+    - questionsArray
+    - function: addQuestion
+    - function: makeTestOutput
+
